@@ -7,6 +7,3 @@ end_of_line = lf
 indent_style = space
 indent_size = 4
 max_line_length = 79
-
-[*.{json,html,css}]
-indent_size = 2
