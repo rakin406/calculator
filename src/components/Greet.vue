@@ -2,19 +2,19 @@
 import { ref } from 'vue';
 import { invoke } from '@tauri-apps/api/tauri';
 
-const greetMsg = ref('');
-const name = ref('');
+const calcResult = ref('');
+const problem = ref('');
 
-async function greet() {
-    greetMsg.value = await invoke('greet', { name: name.value });
+async function calculate(): Promise<void> {
+    calcResult.value = await invoke('calculate', { problem: problem.value });
 }
 </script>
 
 <template>
     <div class="card">
-        <input id="greet-input" v-model="name" placeholder="Enter a name..." />
-        <button type="button" @click="greet()">Greet</button>
+        <input id="math-input" v-model="problem" placeholder="Enter problem..." />
+        <button type="button" @click="calculate()">Calculate</button>
     </div>
 
-    <p>{{ greetMsg }}</p>
+    <p>{{ calcResult }}</p>
 </template>
