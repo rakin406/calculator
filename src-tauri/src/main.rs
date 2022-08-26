@@ -3,9 +3,20 @@
     windows_subsystem = "windows"
 )]
 
+use evalexpr::*;
+
+/// A working calculator
 #[tauri::command]
 fn calculate(problem: &str) -> String {
-    format!("Calculated {}", problem)
+    let calc = eval(problem);
+    match calc {
+        Ok(value) => {
+            format!("{}", value.to_string())
+        }
+        Err(_error) => {
+            format!("?")
+        }
+    }
 }
 
 fn main() {
