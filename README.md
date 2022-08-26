@@ -13,7 +13,7 @@ A simple GUI application for calculations.
 ### Executing program
 
 * Open terminal
-```
+```bash
 git clone https://github.com/rakin406/calculator.git
 cd calculator
 npm install
