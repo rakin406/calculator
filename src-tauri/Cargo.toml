@@ -1,10 +1,10 @@
 [package]
-name = "tauri-app"
-version = "0.0.0"
-description = "A Tauri App"
+name = "calculator"
+version = "0.1"
+description = "A Calculator App"
 authors = ["Rakin Rahman"]
 license = "MIT"
-repository = ""
+repository = "https://github.com/rakin406/calculator"
 edition = "2021"
 rust-version = "1.57"
 
